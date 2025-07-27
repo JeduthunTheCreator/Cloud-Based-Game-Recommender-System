@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: recc-app-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: recc-app
+  template:
+    metadata:
+      labels:
+        app: recc-app
+    spec:
+      containers:
+      - name: recc-app
+        image: gamerecomsys.azurecr.io/recc-rest:latest
+        ports:
+        - containerPort: 8501
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: 8501
+          initialDelaySeconds: 10
+          periodSeconds: 5

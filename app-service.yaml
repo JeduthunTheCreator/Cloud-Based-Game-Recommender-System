@@ -1,0 +1,18 @@
+##
+## You provide this
+##
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: recc-app
+  labels:
+    app: recc-app
+spec:
+  type: LoadBalancer  #LoadBalancer for AKS exposure
+  selector:
+    app: recc-app
+  ports:
+  - protocol: TCP
+    port: 8501
+    targetPort: 8501
