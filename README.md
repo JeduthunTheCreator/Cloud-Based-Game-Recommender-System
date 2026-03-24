@@ -19,6 +19,10 @@ The system is designed to enhance user engagement and game discovery through per
 
 ## Interaction of the various components 
 
+## Collaborative filtering (Training)
+
+## Collaborative filtering (Evaluation)
+
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.
