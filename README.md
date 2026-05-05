@@ -48,11 +48,9 @@ Dataset employed: https://www.kaggle.com/datasets/jummyegg/rawg-game-dataset/dat
 </p>
 
 ## Collaborative filtering (Evaluation):
-The performance of the recommendation algorithm is evaluated using both error-based and ranking-based metrics. To assess prediction accuracy, metrics such as Mean Squared Error (MSE) and Root Mean Squared Error (RMSE) are used to measure the difference between predicted and actual user ratings.
 
-In addition to accuracy, the system is evaluated based on its ability to generate relevant recommendations using the Hit Rate Ratio (HR@N). For each user, the model generates a top-N list of recommended games. A "hit" is recorded if the list contains an item the user has previously interacted with or rated positively. The overall hit rate is then calculated as the proportion of users for whom at least one relevant recommendation is successfully identified.
+As accuracy is not a suitable metric for recommender systems, performance is evaluated using Hit Rate (HR@N), which measures the system’s ability to generate relevant recommendations. For each user, the model produces a top-N list of recommended items, and a “hit” is recorded if the list contains an item the user has previously interacted with or rated positively. The overall hit rate is calculated as the proportion of users for whom at least one relevant recommendation is successfully identified.
 
-This combination of metrics provides a balanced evaluation of both prediction accuracy and recommendation relevance.
 
 <p align="center">
   <img src="assets/images/Collaborative filtering (Evaluation).png" width="800" alt="Evaluation Diagram"/>
